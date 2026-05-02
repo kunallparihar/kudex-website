@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUDEX — Premium Fitness Apparel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">KUD<span>EX</span></a>
+      <nav class="nav-links">
+        <a href="#products">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#products" onclick="closeMobileMenu()">Shop</a>
+      <a href="#categories" onclick="closeMobileMenu()">Categories</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-lines">
+      <div class="h-line"></div><div class="h-line"></div>
+      <div class="h-line"></div><div class="h-line"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Premium Fitness Apparel — India</p>
+      <h1 class="hero-title">
+        <span class="title-line line-1">BUILT</span>
+        <span class="title-line line-2">TO <em>MOVE.</em></span>
+        <span class="title-line line-3">MADE TO</span>
+        <span class="title-line line-4">DOMINATE.</span>
+      </h1>
+      <p class="hero-sub">Engineered for performance. Designed to turn heads.<br>This is KUDEX — wear the difference.</p>
+      <div class="hero-cta-group">
+        <a href="#products" class="btn-primary">Shop Now</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-ring">
+        <svg viewBox="0 0 120 120" class="badge-svg">
+          <defs>
+            <path id="circle-path" d="M60,10 A50,50 0 1,1 59.99,10"/>
+          </defs>
+          <text class="badge-text">
+            <textPath href="#circle-path">KUDEX APPAREL • PREMIUM FITNESS •</textPath>
+          </text>
+        </svg>
+        <span class="badge-center">✦</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ MARQUEE ═══════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>KUDEX</span><span class="gold-dot">✦</span>
+      <span>PREMIUM FITNESS</span><span class="gold-dot">✦</span>
+      <span>BUILT TO LAST</span><span class="gold-dot">✦</span>
+      <span>WEAR THE DIFFERENCE</span><span class="gold-dot">✦</span>
+      <span>KUDEX</span><span class="gold-dot">✦</span>
+      <span>PREMIUM FITNESS</span><span class="gold-dot">✦</span>
+      <span>BUILT TO LAST</span><span class="gold-dot">✦</span>
+      <span>WEAR THE DIFFERENCE</span><span class="gold-dot">✦</span>
+      <span>KUDEX</span><span class="gold-dot">✦</span>
+      <span>PREMIUM FITNESS</span><span class="gold-dot">✦</span>
+      <span>BUILT TO LAST</span><span class="gold-dot">✦</span>
+      <span>WEAR THE DIFFERENCE</span><span class="gold-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ FEATURED PRODUCTS ═══════════════════════════════════ -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <p class="section-label">— Featured Collection</p>
+      <h2 class="section-title">SHOP THE BEST</h2>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Product 1 -->
+      <div class="product-card" data-id="1">
+        <div class="card-badge">Bestseller</div>
+        <div class="card-img-wrap">
+          <img src="images/product1.jpg">
+          com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="KUDEX Core Tee" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(1)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">T-Shirt</span>
+          <h3 class="card-name">KUDEX Core Tee</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹399</span>
+            <button class="add-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-id="2">
+        <div class="card-img-wrap">
+         <img src="images/product2.jpg">
+        /photo-1542291026-7eec264c27ff?w=600&q=80" alt="KUDEX Flex Joggers" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(2)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">Lowers</span>
+          <h3 class="card-name">KUDEX Flex Joggers</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹549</span>
+            <button class="add-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-id="3">
+        <div class="card-badge new-badge">New</div>
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=600&q=80" alt="KUDEX Elite Formal Blazer" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(3)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">Formal Wear</span>
+          <h3 class="card-name">KUDEX Elite Blazer</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹599</span>
+            <button class="add-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-id="4">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&q=80" alt="KUDEX Muscle Tank" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(4)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">T-Shirt</span>
+          <h3 class="card-name">KUDEX Muscle Tank</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹299</span>
+            <button class="add-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card" data-id="5">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=600&q=80" alt="KUDEX Training Shorts" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(5)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">Lowers</span>
+          <h3 class="card-name">KUDEX Training Shorts</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹449</span>
+            <button class="add-cart-btn" onclick="addToCart(5)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card" data-id="6">
+        <div class="card-badge sale-badge">Sale</div>
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="KUDEX Slim Formal Trousers" loading="lazy"/>
+          <div class="card-overlay">
+            <button class="quick-add" onclick="addToCart(6)">+ Quick Add</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-cat">Formal Wear</span>
+          <h3 class="card-name">KUDEX Slim Trousers</h3>
+          <div class="card-bottom">
+            <span class="card-price">₹499</span>
+            <button class="add-cart-btn" onclick="addToCart(6)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CATEGORIES ═══════════════════════════════════ -->
+  <section class="categories-section" id="categories">
+    <div class="section-header">
+      <p class="section-label">— Browse By Style</p>
+      <h2 class="section-title">CATEGORIES</h2>
+    </div>
+
+    <div class="categories-grid">
+
+      <div class="cat-card" onclick="scrollToProducts()">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=700&q=80" alt="T-Shirts" loading="lazy"/>
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <h3>T-Shirts</h3>
+          <p>Performance & Style</p>
+          <span class="cat-link">Explore →</span>
+        </div>
+      </div>
+
+      <div class="cat-card" onclick="scrollToProducts()">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=700&q=80" alt="Lowers" loading="lazy"/>
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <h3>Lowers</h3>
+          <p>Move Without Limits</p>
+          <span class="cat-link">Explore →</span>
+        </div>
+      </div>
+
+      <div class="cat-card" onclick="scrollToProducts()">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=700&q=80" alt="Formal Wear" loading="lazy"/>
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <h3>Formal Wear</h3>
+          <p>Sharp. Refined. KUDEX.</p>
+          <span class="cat-link">Explore →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ STATS BANNER ═══════════════════════════════════ -->
+  <div class="stats-banner">
+    <div class="stat-item">
+      <span class="stat-num">10K+</span>
+      <span class="stat-label">Happy Customers</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">Products</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <span class="stat-num">4.9★</span>
+      <span class="stat-label">Avg. Rating</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Premium Quality</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ ABOUT ═══════════════════════════════════ -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-label">— Our Story</p>
+        <h2 class="about-title">WE ARE<br/><em>KUDEX</em></h2>
+        <p class="about-desc">
+          KUDEX was born in the sweat of early morning gym sessions and the fire of relentless ambition. 
+          We create fitness apparel that doesn't just survive your toughest workouts — it fuels them.
+        </p>
+        <p class="about-desc">
+          Every stitch is intentional. Every fabric is chosen for performance. From the gym floor to the streets 
+          of India, KUDEX is the uniform of those who refuse to settle.
+        </p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <span class="pillar-icon">⚡</span>
+            <div>
+              <strong>Performance Fabrics</strong>
+              <p>Breathable, stretch-resistant materials that move with you.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">✦</span>
+            <div>
+              <strong>Premium Build</strong>
+              <p>Reinforced seams and precision stitching for long-lasting wear.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🔥</span>
+            <div>
+              <strong>Bold Design</strong>
+              <p>Made to stand out — in the gym, on the track, or in the office.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=700&q=80" alt="KUDEX Brand" loading="lazy"/>
+          <div class="about-img-badge">
+            <span class="aib-year">EST.</span>
+            <span class="aib-num">2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo footer-logo">KUD<span>EX</span></a>
+        <p>Premium Fitness Apparel.<br/>Made for those who grind.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <a href="#products">All Products</a>
+        <a href="#categories">T-Shirts</a>
+        <a href="#categories">Lowers</a>
+        <a href="#categories">Formal Wear</a>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <a href="#">Size Guide</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Follow</h4>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 KUDEX Apparel. All rights reserved.</p>
+      <p>Made with ✦ in India</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ CART SIDEBAR ═══════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <span>🛒</span>
+        <p>Your cart is empty.</p>
+        <a href="#products" onclick="closeCart()" class="btn-primary" style="margin-top:16px;display:inline-block;">Start Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <p class="cart-shipping-note">🚚 Free shipping on orders above ₹799</p>
+      <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+      <button class="btn-ghost clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
